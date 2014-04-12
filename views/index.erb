@@ -1,4 +1,10 @@
 <form action="/" method="post">
   <input type="text" placeholder="Herb Name" name="herb">
+  <input type="text" placeholder="Plant Part" name="part">
   <input type="submit" value="Collect">
 </form>
+<hr>
+<ul><% herb_friends.each do |herb| %>
+  <li><%=herb[:name]%> | <%=herb[:part]%></li>
+    <%end%>
+</ul>
